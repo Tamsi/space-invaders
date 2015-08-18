@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Invaders</title>
+
+		<script type="text/javascript" src="js/phaser.min.js"></script>
+		<script type="text/javascript" src="js/states/Boot.js"></script>
+		<script type="text/javascript" src="js/states/Preloader.js"></script>
+		<script type="text/javascript" src="js/states/MainMenu.js"></script>
+		<script type="text/javascript" src="js/states/Game.js"></script>
+		<script type="text/javascript" src="js/states/End.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+		window.onload = function() {
+			var game = new Phaser.Game(800, 600, Phaser.CANVAS, "gameContainer");
+			var pkey;
+			var firstInvaders;
+			var direction;
+
+			game.state.add("Boot", BootStage);
+			game.state.add("Preloader", PreloaderStage);
+			game.state.add("MainMenu", MainMenuStage);
+			game.state.add("Game", GameStage);
+			game.state.add("End", EndStage);
+			console.log("y");
+
+			game.state.start("Boot");
+		}
+		</script>
+		<div id="gameContainer"></div>
+	</body>
+
+</html>
