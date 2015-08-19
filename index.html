@@ -14,18 +14,22 @@
 		window.onload = function() {
 			var game = new Phaser.Game(800, 600, Phaser.CANVAS, "gameContainer");
 			var pkey;
+			var nkey;
+			var zkey;
+			var explosion;
 			var firstInvaders;
 			var direction;
+			var fireRate = 100;
+			var nextFire = 0;
 
-			game.state.add("Boot", BootStage);
-			game.state.add("Preloader", PreloaderStage);
-			game.state.add("MainMenu", MainMenuStage);
-			game.state.add("Game", GameStage);
-			game.state.add("End", EndStage);
-			console.log("y");
+			game.state.add('Boot', BasicGame.Boot);
+			game.state.add('Preloader', BasicGame.Preloader);
+			game.state.add('MainMenu', BasicGame.MainMenu);
+			game.state.add('Game', BasicGame.Game);
+			game.state.add('End', BasicGame.End);
 
 			game.state.start("Boot");
-		}
+		};
 		</script>
 		<div id="gameContainer"></div>
 	</body>

@@ -1,4 +1,7 @@
-var MainMenuStage = {
+BasicGame.MainMenu = function (game) {
+};
+
+BasicGame.MainMenu.prototype = {
 
     create : function(){
     	var title;
@@ -20,4 +23,4 @@ var MainMenuStage = {
     	this.game.state.start("Game");
     }
 
-}
+};

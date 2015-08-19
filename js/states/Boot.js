@@ -1,8 +1,12 @@
-var BootStage = {
+var BasicGame = {};
+
+BasicGame.Boot = function (game) {
+};
+
+BasicGame.Boot.prototype = {
 
     create : function(){
-        console.log("a");
         this.game.state.start("Preloader");
     }
 
-}
+};
